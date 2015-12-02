@@ -1,14 +1,22 @@
 #!/usr/bin/env python
 #-*- coding:utf-8 -*-
-"""
-双色球选号程序
-"""
-import random
+'''
+这是一个生成双色球号码的程序
+'''
 
-ssq_list=[]
-x=random.randint(1,33)
+
+
+import random
 i = 1
-while  x in range(1,34) and i <=6:
-    ssq_list.append(x)
-    i = i +1
-    print ssq_list
+ssq_redball = []
+ssq_blueball = []
+while i < 7 :
+    ssq_redball.append(random.randint(1,33))
+    i += 1
+if len(set(ssq_redball)) != 6:
+    ssq_redball.append(random.randint(1,33))
+else :
+    pass
+ssq_blueball.append(random.randint(1,14))
+print sorted(ssq_redball),ssq_blueball
+
