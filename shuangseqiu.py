@@ -2,25 +2,14 @@
 #-*- coding:utf-8 -*-
 print u"""#*******************************\n
 这是一个随机生成双色球号码的程序\n
-*******************************#
-
+********************************#
 
 """
 
 import random
 
 
-x=int(raw_input("双色球机选输入1；双色球手选请输入2:"))
-
-if x == 1:
-    range_ssq()
-elif x == 2:
-    zhiding_ssq()
-else:
-    print u"输入错误"
-
-
-def range_ssq():
+def jixuan_ssq():
 #定义自动选号函数
     i = 1
     ssq_redball = []
@@ -40,7 +29,7 @@ def range_ssq():
     print "随机生成一注双色球号码为:",sorted(set(ssq_redball)),ssq_blueball
     #打印一组双色球（红球+篮球）号码
 
-def zhiding_ssq():
+def shouxuan_ssq():
 #定义手动选号函数
     i = 1
     ssq_redball = []
